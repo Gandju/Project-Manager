@@ -1,0 +1,21 @@
+<div class="col-sm-5 col-md-4">
+  <ul class="nav nav-pills nav-stacked">
+    <li><a href class="btn btn-primary" ng-click="PG.show = 'bash'" ng-class="{active: PG.show == 'bash'}">Bash</a></li>
+    <li><a href class="btn btn-primary" ng-click="PG.show = 'exclude'" ng-class="{active: PG.show == 'exclude'}">File Exclude</a></li>
+    <li><a href class="btn btn-primary" ng-click="PG.show = 'ignore'" ng-class="{active: PG.show == 'ignore'}">File Ignore</a></li>
+  </ul>
+</div>
+
+<div class="col-sm-7 col-md-8" ng-show="PG.show == 'bash'">
+  <pre class="bash">{{PG.bashMessage}}<form ng-submit="PG.keypress()">> git<input type="text" ng-model="PG.bashInput" autofocus></form></pre>
+</div>
+
+<div class="col-sm-7 col-md-8" ng-show="PG.show == 'exclude'">
+  <textarea cols="30" rows="10" ng-model="PG.exclude"></textarea>
+  <button class="btn btn-primary" ng-click="PG.saveExclude()">Сохранить</button>
+</div>
+
+<div class="col-sm-7 col-md-8" ng-show="PG.show == 'ignore'">
+  <textarea cols="30" rows="10" ng-model="PG.ignore"></textarea>
+  <button class="btn btn-primary" ng-click="PG.saveIgnore()">Сохранить</button>
+</div>

@@ -1,0 +1,44 @@
+<tabset justified="true" class="">
+  <tab heading="Информация" active="p.tabs[0]">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        <div class="page-header">
+          <h3>{{p.project.name}} <small> v.{{p.project.version}}</small></h3>
+          <p>{{p.project.description}}</p>
+        </div>
+
+        <project-info projct="p.project" class="row"></project-info>
+
+      </div>
+    </div>
+  </tab>
+  <tab heading="Gulp" disabled="!p.hasGulp" active="p.tabs[1]">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        <div class="page-header">
+          <h3>{{p.project.name}} <small> v.{{p.project.version}}</small></h3>
+          <p>{{p.project.description}}</p>
+        </div>
+
+        <project-gulp projct="p.project" class="row"></project-gulp>
+
+      </div>
+    </div>
+  </tab>
+  <tab heading="Git" disabled="!p.hasGit" active="p.tabs[2]">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+        <div class="page-header">
+          <h3>{{p.project.name}} <small> v.{{p.project.version}}</small></h3>
+          <p>{{p.project.description}}</p>
+        </div>
+
+        <project-git projct="p.project" class="row"></project-git>
+
+      </div>
+    </div>
+  </tab>
+</tabset>

@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h3>Проекты</h3>
+</div>
+
+<div class="list-group">
+  <a ng-repeat="project in sb.projects track by $index"
+     class="list-group-item"
+     ng-href="#/project/{{project.name}}/{{project.version}}"
+     ng-click="sb.active = $index"
+     ng-class="sb.active == $index ? 'active' : ''">
+    <span class="remove" ng-click="sb.removeProject(project.name, project.version)"><span class="glyphicon glyphicon-remove"></span></span>
+    <span class="badge">v.{{project.version}}</span>
+    <h4 class="list-group-item-heading">{{project.name}}</h4>
+  </a>
+</div>
+
+<form class="form" name="newProject">
+  <div class="form-group has-warning">
+    <input type="text"
+           class="form-control"
+           placeholder="C://projects/exampleProject"
+           required
+           ng-model="sb.projectPath">
+  </div>
+  <button type="submit" class="btn btn-primary block-center" ng-click="sb.addProject()" ng-disabled="!newProject.$valid">
+    Добавить проет
+  </button>
+</form>

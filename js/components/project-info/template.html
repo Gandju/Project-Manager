@@ -1,0 +1,13 @@
+<div class="col-sm-5 col-md-4">
+  <ul class="nav nav-pills nav-stacked">
+    <li><a href class="btn btn-primary" ng-click="PI.create()" ng-disabled="PI.projct.packageOBJ">Создать</a></li>
+    <li><a href class="btn btn-primary" ng-click="PI.edit()" ng-disabled="PI.editPackageJSON || !PI.projct.packageOBJ">Редактировать</a></li>
+    <li><a href class="btn btn-primary" ng-click="PI.save()" ng-disabled="!PI.editPackageJSON">Сохранить</a></li>
+    <li><a href class="btn btn-warning" ng-click="PI.cancel()" ng-disabled="!PI.editPackageJSON">Отмена</a></li>
+  </ul>
+</div>
+
+<div class="col-sm-7 col-md-8">
+  <json-formatter class="json-formatter" open="1" json="PI.projct.packageOBJ" ng-hide="PI.editPackageJSON"></json-formatter>
+  <textarea name="json" cols="30" rows="10" ng-model="PI.projct.packageJSON" ng-show="PI.editPackageJSON"></textarea>
+</div>

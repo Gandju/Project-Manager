@@ -1,0 +1,291 @@
+html, body {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  -webkit-user-select: none;
+  cursor: default !important;
+}
+
+body {
+  padding: 20px 5px;
+  overflow: hidden;
+}
+
+::selection {
+  background: rgba(255,255,255,.2); /* Safari */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,.1);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.4);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.json-formatter {
+  padding: 10px;
+  border-radius: 4px;
+  background: #ECEFF1;
+}
+
+.btn.btn-primary{
+  transition: all .2s;
+  background-color: #009688;
+  border-color: #00897B;
+}
+.btn.btn-primary:hover{
+  background-color: #00897B;
+  border-color: #00796B;
+}
+.btn.btn-primary:focus{
+  outline: none;
+  background-color: #00796B;
+  border-color: #00695C;
+}
+
+.btn.btn-primary.active{
+  transition: all .2s;
+  background-color: #004D40;
+  border-color: #004D40;
+}
+.btn.btn-primary.active:hover{
+  background-color: #004D40;
+  border-color: #004D40;
+}
+.btn.btn-primary.active:focus{
+  outline: none;
+  background-color: #004D40;
+  border-color: #004D40;
+}
+
+[sidebar] {
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+[sidebar] .remove {
+  display: block;
+  position: relative;
+  float: right;
+  color: #C62828;
+  margin-left: 5px;
+  z-index: 10;
+}
+
+[sidebar] .page-header {
+  margin-top: 0;
+}
+
+[sidebar] .page-header h3 {
+  margin: 5px 0 3px 0;
+  color: #eee;
+}
+
+[sidebar] .list-group .list-group-item {
+  transition: all .2s;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+[sidebar] .list-group .list-group-item:last-child {
+  border-bottom: none;
+}
+[sidebar] .list-group .list-group-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+[sidebar] .list-group .list-group-item.active {
+  background: #777;
+}
+
+[sidebar] .list-group .list-group-item .list-group-item-heading {
+  transition: all .2s;
+  margin-bottom: 0;
+  color: #eee;
+}
+[sidebar] .list-group .list-group-item.active .list-group-item-heading {
+  color: #fff;
+}
+
+[sidebar] .list-group .list-group-item.active .badge {
+  transition: all .2s;
+  color: #eee;
+  background: #333;
+}
+
+[sidebar] .form .form-control {
+  transition: all .2s;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+}
+
+[sidebar] .form .form-control:focus {
+  border-color: rgba(255,255,255,0.3);
+  outline: none;
+  box-shadow: none;
+}
+
+[sidebar] .form .btn {
+  width: 100%;
+}
+
+project {
+  display: block;
+  height: 100%;
+}
+
+project > div {
+  height: 100%;
+}
+
+project .tab-content {
+  height: calc(100% - 42px);
+}
+
+project .tab-pane,
+project .tab-pane .panel,
+project .tab-pane .panel-body  {
+  height: 100%;
+}
+
+project .tab-pane .panel-body {
+  overflow-y: scroll;
+}
+
+project .nav-tabs > li > a {
+  transition: all .2s;
+  color: #eee;
+}
+
+project .nav-tabs > li > a:hover {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom-color: #eee;
+}
+
+project .nav-tabs > .active > a, project .nav-tabs > .active > a:hover, project .nav-tabs > .active > a:focus {
+  border: 1px solid rgba(255,255,255,0.1);
+  border-bottom: none!important;
+  background: none;
+  color: #eee;
+}
+
+project .panel {
+  background: none;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: 0;
+}
+
+project .page-header {
+  margin-top: 0;
+}
+
+project .page-header h3 {
+  margin: 10px 0 5px 0;
+  color: #fff;
+}
+
+project .page-header p {
+  color: #eee;
+}
+
+project-info {
+  display: block;
+}
+
+project-info h3 {
+  margin: 10px 0 15px 0;
+  color: #fff;
+}
+
+project-info .btn-group {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+project-gulp {
+  display: block;
+}
+
+.bash {
+  box-sizing: border-box;
+  min-height: 300px;
+  background: #000;
+  border: none;
+  color: #fff;
+  -webkit-user-select: auto;
+  cursor: text;
+}
+
+.bash input{
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: calc(100% - 40px);
+  height: 20px;
+  max-height: 70%;
+  padding: 0 5px;
+  border-radius: 0;
+  border: none;
+  background: #000;
+  color: #fff;
+  -webkit-user-select: auto;
+  cursor: text;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.bash input:focus{
+  outline: none;
+  box-shadow: none;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 280px;
+  padding: 10px;
+  transition: all .2s;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  background: rgba(255,255,255,0.1);
+  color: #eee;
+}
+
+textarea:focus {
+  border-color: rgba(255,255,255,0.3);
+  outline: none;
+  box-shadow: none;
+}
+
+.alert-block {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 45%;
+}
+
+project-git {
+  display: block;
+}
+
+project-git textarea{
+  margin-bottom: 20px;
+}
+
+project-git textarea + .btn{
+  float: right;
+}
