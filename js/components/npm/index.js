@@ -3,7 +3,7 @@
 var angular = require('angular');
 require('../../factories/git-parser');
 
-var App = angular.module('app.project-git', ['app.git-parser']);
+var App = angular.module('app.npm');
 
 App.directive('projectGit', projectGulp);
 

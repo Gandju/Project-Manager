@@ -10,16 +10,17 @@ require('./components/project');
 require('./components/project-info');
 require('./components/project-gulp');
 require('./components/project-git');
+require('./components/bash');
 
-angular.module('GitExcluder',
+angular.module('ProjectManager',
   ['ngRoute', 'ui.bootstrap', 'LocalStorageModule', 'jsonFormatter', 'app.sidebar', 'app.project', 'app.project-info',
-   'app.project-gulp', 'app.project-git']);
+   'app.project-gulp', 'app.project-git', 'app.bash']);
 
 angular
-  .module('GitExcluder')
+  .module('ProjectManager')
   .controller('AppController', AppController)
   .config(function (localStorageServiceProvider, $routeProvider) {
-    localStorageServiceProvider.setPrefix('GitExcluder');
+    localStorageServiceProvider.setPrefix('ProjectManager');
 
     $routeProvider.when('/project/:name/:version', {
       template: "<project></project>"
